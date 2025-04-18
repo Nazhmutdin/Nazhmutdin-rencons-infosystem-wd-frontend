@@ -43,7 +43,6 @@ export const showGtdsValue = (value: Array<String> | null, sep: string = ", ") =
 }
 
 export const presentFromBefore = (range: [number | null, number | null] | null) => {
-    console.log(range)
     if (!range) {
         return "-"
     } else if (range[0] && range[1]) {
