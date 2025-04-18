@@ -20,5 +20,6 @@
     }
     .content {
         margin-left: calc(3vw + 1px);
+        padding: 1rem;
     }
 </style>
