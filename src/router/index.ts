@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import NotFoundView from '@/views/NotFoundView.vue'
 import MainView from '@/views/MainView.vue'
 import AcstRegistryView from '@/views/AcstRegistryView.vue'
+import AcsoRegistryView from '@/views/AcsoRegistryView.vue'
+import NaksBuilderView from '@/views/NaksBuilderView.vue'
 import AcstView from '@/views/AcstView.vue'
 import AuthView from '@/views/AuthView.vue'
 
@@ -34,6 +36,16 @@ const router = createRouter({
         name: 'acstRegistry',
         path: '/acst-registry',
         component: AcstRegistryView
+    },
+    {
+        name: 'acsoRegistry',
+        path: '/acso-registry',
+        component: AcsoRegistryView
+    },
+    {
+        name: 'naksBuilder',
+        path: '/naks-builder',
+        component: NaksBuilderView
     },
     // {
     //     name: 'edo',

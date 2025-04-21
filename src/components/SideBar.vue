@@ -9,18 +9,18 @@
             </template>
             <div class="container">
                 <Accordion :value="['0']" multiple>
-                    <AccordionPanel value="0">
+                    <!-- <AccordionPanel value="0">
                         <AccordionHeader>NAKS</AccordionHeader>
                         <AccordionContent>
                             <ul>
-                                <li class="sidebar-link">
-                                    <router-link :to="{ name: 'acstRegistry' }">
+                                <li class="sidebar-link"> -->
+                                    <router-link class="sidebar-link" :to="{ name: 'acstRegistry' }">
                                         <span>acst</span>
                                     </router-link>
-                                </li>
+                                <!-- </li>
                             </ul>
                         </AccordionContent>
-                    </AccordionPanel>
+                    </AccordionPanel> -->
                 </Accordion>
             </div>
         </drawer>
@@ -47,7 +47,7 @@
         border-right: 1px solid #c4cad2;
     }
     .sidebar-panel {
-        width: 3vw;
+        width: var(--sidebar-width);
         display: flex;
         justify-content: center;
     }
@@ -58,7 +58,7 @@
         cursor: pointer;
         list-style: none;
     }
-    ul li a {
+    .sidebar-link {
         text-decoration: none;
         color: var(--p-accordion-content-color);
         font-size: var(--sidebar-content-font-size);
