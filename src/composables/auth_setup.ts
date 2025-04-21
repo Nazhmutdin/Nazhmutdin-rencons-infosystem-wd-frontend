@@ -12,9 +12,7 @@ export function useAuthSetup() {
     const authStore = useAuthStore()
 
     const LogIn = async () => {
-        console.log(login.value, password.value)
         const res = await authStore.logIn(login.value, password.value)
-        console.log(res)
 
         if (!!res && res?.data?.code === "invalid_password") {
             invalidPassword.value = true
