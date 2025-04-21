@@ -46,4 +46,25 @@ export interface SelectResponseData<Data> {
 }
 
 
-export interface SelectAcstFilters extends BaseSelectFilters {}
+export interface SelectAcstFilters extends BaseSelectFilters {
+    methods?: string[]
+    certificationDateFrom?: string
+    certificationDateTo?: string
+    expirationDateFrom?: string
+    expirationDateTo?: string
+    thiknessFrom?: number
+    thiknessTo?: number
+    diameterFrom?: number
+    diameterTo?: number
+}
+
+
+export interface GtdData {
+    fullDescription: string,
+    ntds: string[]
+}
+
+
+export interface GTDs { 
+    [key: number]: GtdData 
+}
