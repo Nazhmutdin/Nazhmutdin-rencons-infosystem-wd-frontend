@@ -6,6 +6,21 @@ export const showValue = (value: string | number | null | undefined) => {
     }
 }
 
+export const convertFromDate = (value: Date) => {
+    return value.toLocaleDateString("ru-RU")
+}
+
+export const convertToDate = (value: string) => {
+    const date = new Date()
+
+    const dateItems = value.split(".")
+
+    date.setDate(parseInt(dateItems[0]))
+    date.setMonth(parseInt(dateItems[1]))
+    date.setFullYear(parseInt(dateItems[2]))
+
+    return date
+}
 
 export const showListValue = (value: Array<any> | null, sep: string = ", ") => {
     if (value) {
