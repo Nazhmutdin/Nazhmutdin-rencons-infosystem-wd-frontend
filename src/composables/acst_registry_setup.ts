@@ -1,7 +1,10 @@
+import { ref } from "vue"
+
 import { useAcstRegistryStore } from "@/store/acstRegistry"
 
 
 export function useAcstRegistrySetup() {
+    const filterModalVisible = ref(false)
     const acstRegistryStore = useAcstRegistryStore()
 
     const onPageChangeHandler = async (value: number) => {
@@ -12,6 +15,7 @@ export function useAcstRegistrySetup() {
 
     return {
         acstRegistryStore,
+        filterModalVisible,
         onPageChangeHandler
     }
 }
